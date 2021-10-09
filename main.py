@@ -1,16 +1,9 @@
-# This is a sample Python script.
+from PIL import Image
+from pytesseract import *
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+test_img = "33.png"
+image=Image.open(test_img)
+text = image_to_string(image,lang="kor")
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+with open("sample.txt","w") as f:
+    f.write(text)
