@@ -5,6 +5,10 @@ from pytesseract import Output
 import  matplotlib.pyplot as plt
 from skimage.transform import resize
 
+import pyautogui
+
+pyautogui.screenshot('test.png')
+
 
 pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract'
 config = ('-l kor+eng --oem 3 --psm 6')
